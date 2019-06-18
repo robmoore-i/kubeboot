@@ -1,8 +1,15 @@
 # Kubeboot
 
-Deploy a springboot thing to kubernetes
+Deploy a springboot app to kubernetes.
 
-## What's the simplest way to use Kubernetes?
+## Which online resources did you rely on?
+
+- Kubernetes interactive in-browser walk-through: https://kubernetes.io/docs/tutorials/kubernetes-basics/
+
+- Deploying a springboot app to kubernetes with minikube:
+https://gorillalogic.com/blog/build-and-deploy-a-spring-boot-app-on-kubernetes-minikube/
+
+## How do I deploy my springboot app to kubernetes with minikube?
 
 1. Create a cluster
 
