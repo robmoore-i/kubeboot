@@ -2,8 +2,6 @@
 
 package rm.kubeboot
 
-import org.springframework.boot.runApplication
-
 fun main(args: Array<String>) {
-    runApplication<KubebootApplication>(*args)
+    SpringController.start(8080)
 }
