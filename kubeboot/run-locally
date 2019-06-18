@@ -1,0 +1,8 @@
+jar_location="build/libs/kubeboot-0.0.1-SNAPSHOT.jar"
+if [[ ! -f "$jar_location"  ]]
+then
+  echo "> Making jar first"
+  ./jar
+fi
+
+java -jar build/libs/kubeboot-0.0.1-SNAPSHOT.jar
