@@ -1,0 +1,1 @@
+kubectl expose deployment/kubeboot --type="NodePort" --port 8080

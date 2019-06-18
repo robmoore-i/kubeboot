@@ -1,0 +1,1 @@
+kubectl run kubeboot --image=kubeboot --image-pull-policy=Never

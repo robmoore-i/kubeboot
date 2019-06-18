@@ -1,0 +1,13 @@
+./configure-minikube-docker-env
+sleep 1
+./kubeboot-build
+sleep 1
+./kubectl-run-kubeboot
+sleep 5
+./kubectl-expose-kubeboot
+sleep 5
+kubeboot_origin=`./kubeboot-origin`
+echo "Kubeboot deployed. Curl on root path yields:"
+curl ${kubeboot_origin}
+echo ""
+echo "The origin of the app is: ${kubeboot_origin}"

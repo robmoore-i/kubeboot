@@ -1,0 +1,3 @@
+host=`minikube ip`
+port=`kubectl get svc kubeboot -o=jsonpath='{.spec.ports[?(@.port==8080)].nodePort}'`
+echo "${host}:${port}"
