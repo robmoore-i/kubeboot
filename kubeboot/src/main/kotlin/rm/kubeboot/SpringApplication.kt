@@ -12,11 +12,7 @@ class SpringApplication {
         lateinit var context: ConfigurableApplicationContext
 
         fun start(portNumber: Int) {
-            start(portNumber, RequestHandler())
-        }
-
-        fun start(portNumber: Int, requestHandler: RequestHandler) {
-            SpringController.requestHandler = requestHandler
+            SpringController.requestHandler = RequestHandler()
             context = SpringApplicationBuilder(SpringApplication::class.java)
                     .properties(mapOf(Pair("server.port", portNumber)))
                     .run()
