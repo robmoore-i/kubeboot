@@ -9,6 +9,21 @@ Deploy a springboot app to kubernetes.
 - Deploying a springboot app to kubernetes with minikube:
 https://gorillalogic.com/blog/build-and-deploy-a-spring-boot-app-on-kubernetes-minikube/
 
+## How Do I install the stuff?
+
+- You need `kubectl` and `minikube`. These can both be installed with 
+brew.
+
+- `brew install kubernetes-cli`
+
+- `brew cask install minikube`
+
+## How do I prepare the cluster?
+
+- Minikube is for making local clusters. I started one with the command 
+`minikube start`. This will also make `kubectl` target this cluster by
+default.
+
 ## How do I deploy my springboot app to kubernetes with minikube?
 
 1. Create a cluster
