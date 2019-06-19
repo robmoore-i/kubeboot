@@ -24,12 +24,12 @@ class IntegrationTest {
 
     @Before
     fun setUp() {
-        SpringController.start(9090)
+        SpringApplication.start(9090)
     }
 
     @After
     fun tearDown() {
-        SpringController.stop()
+        SpringApplication.stop()
     }
 
     @Test

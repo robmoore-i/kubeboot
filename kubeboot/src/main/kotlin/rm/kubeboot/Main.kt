@@ -3,5 +3,5 @@
 package rm.kubeboot
 
 fun main(args: Array<String>) {
-    SpringController.start(8080)
+    SpringApplication.start(8080)
 }
