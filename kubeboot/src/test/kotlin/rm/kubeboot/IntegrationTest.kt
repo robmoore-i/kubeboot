@@ -41,13 +41,18 @@ class IntegrationTest {
     }
 
     private fun get(url: String): String {
-        return webClient.get()
+        val block: String? = webClient.get()
                 .uri(url)
                 .accept(MediaType.APPLICATION_JSON)
                 .retrieve()
                 .onStatus(HttpStatus::isError) { response: ClientResponse -> Mono.error(Exception("Request 'GET " + url + "' gave response with status code " + response.statusCode().value())) }
                 .bodyToMono<String>()
                 .block()
-                .orEmpty()
+
+        if (block == null) {
+            throw Exception("No response body received from GET $url")
+        } else {
+            return block
+        }
     }
 }
